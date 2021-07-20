@@ -53,3 +53,22 @@
 ```
  printenv
 ```
+
+## RUN DOCKER COMPOSE
+
+```
+#build
+docker-compose up -d
+
+#with re-build
+docker-compose up -d --build
+
+#down/remove build with remove unnecessary volumes
+docker-compose down -v
+
+#build with specific stage
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+
+#down/remove with specific stage with remove unnecessary volumes
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml down -v
+```
